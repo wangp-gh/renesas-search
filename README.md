@@ -49,14 +49,38 @@ Many Renesas datasheets publish **Typ-only values** in their electrical characte
 
 ## Installation
 
-This is an OpenClaw skill. Place the `renesas-search` folder under your workspace's `skills/` directory:
+### Option A: One-line install (recommended)
+
+If you are using OpenClaw, install directly from this git repository:
 
 ```bash
-mkdir -p ~/.openclaw/workspace/skills
-cp -r renesas-search ~/.openclaw/workspace/skills/
+openclaw skills install git:https://github.com/wangp-gh/renesas-search
 ```
 
-OpenClaw will auto-discover the skill on next session start.
+The skill is auto-discovered on next session start. To update later, run the same command with `--force`:
+
+```bash
+openclaw skills install git:https://github.com/wangp-gh/renesas-search --force
+```
+
+### Option B: Manual clone
+
+```bash
+git clone https://github.com/wangp-gh/renesas-search.git \
+  ~/.openclaw/workspace/skills/renesas-search
+```
+
+OpenClaw will pick it up on next session start.
+
+### For non-OpenClaw agents (Hermes, LangChain, etc.)
+
+This skill is defined as a Markdown specification (SKILL.md). Non-OpenClaw agents do not have the `openclaw skills install` command, but the **SKILL.md content is portable**:
+
+1. Read [SKILL.md](./SKILL.md) — it describes the trigger conditions and workflow.
+2. Translate the rules (no-fabrication, typ-only reporting, datasheet requirement) into your agent's prompt / system message.
+3. Reference [references/product_families.md](./references/product_families.md) for the part index.
+
+The skill is **not** a packaged binary — it is a specification that any agent can follow if you inline its rules.
 
 ## Repository Layout
 
