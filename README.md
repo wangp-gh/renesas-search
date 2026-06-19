@@ -89,9 +89,25 @@ renesas-search/
 ├── SKILL.md                    # Skill definition (read by OpenClaw)
 ├── README.md                   # This file
 ├── LICENSE                     # MIT
+├── TEST_SCENARIOS.md           # Three runnable test scenarios (clone-and-verify)
 └── references/
     └── product_families.md     # Verified Renesas part index
 ```
+
+## Try It (After Install)
+
+Open your OpenClaw agent and ask one of these questions. Full expected behavior is documented in [TEST_SCENARIOS.md](./TEST_SCENARIOS.md).
+
+**Test the trigger rule:**
+> "Compare DA14594 and DA14592 for a smart lock application."
+
+**Test the no-fabrication rule:**
+> "What is the hibernation current of DA14594?"
+
+**Test the typ-only reporting rule:**
+> "What is the Rx current of DA14592 at 0 dBm, 3 V?"
+
+All three tests should download the datasheet PDFs to `embedded_dev/renesas/datasheet/` and cite specific tables/pages in their answers.
 
 ## License
 
