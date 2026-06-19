@@ -72,7 +72,18 @@ git clone https://github.com/wangp-gh/renesas-search.git \
 
 OpenClaw will pick it up on next session start.
 
-### For non-OpenClaw agents (Hermes, LangChain, etc.)
+### For Hermes Agent users
+
+Hermes reads the same SKILL.md and is compatible as-is. Install with:
+
+```bash
+# From GitHub URL (Hermes will use the metadata.hermes.category = "research")
+hermes skills install https://raw.githubusercontent.com/wangp-gh/renesas-search/main/SKILL.md --category research
+```
+
+The skill's frontmatter already includes Hermes fields (`version`, `author`, `license`, `platforms`, `metadata.hermes.{category,tags,related_skills}`). See [HERMES_INSTALL.md](./HERMES_INSTALL.md) for full details, category selection, and verification.
+
+### For non-Hermes agents (LangChain, AutoGen, etc.)
 
 This skill is defined as a Markdown specification (SKILL.md). Non-OpenClaw agents do not have the `openclaw skills install` command, but the **SKILL.md content is portable**:
 

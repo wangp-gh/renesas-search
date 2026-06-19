@@ -9,6 +9,15 @@ description: >
   All chip parameters MUST be fetched from official datasheets or renesas.com product pages.
   When a solution is provided, the corresponding chip datasheet PDF must be downloaded
   to the current working directory under "embedded_dev/renesas/datasheet/".
+version: 3.0.4
+author: Peter (wangp-gh)
+license: MIT
+platforms: [linux, macos, windows]
+metadata:
+  hermes:
+    category: research
+    tags: [Renesas, semiconductor, datasheet, BLE, MCU, RZ, RL78, RX, RA, no-fabrication, da14594, da14592, da14531, ra6m5, isl88013]
+    related_skills: []
 ---
 
 # Renesas Search Skill
