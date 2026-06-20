@@ -77,8 +77,8 @@ OpenClaw will pick it up on next session start.
 Hermes reads the same SKILL.md and is compatible as-is. Install with:
 
 ```bash
-# From GitHub URL (Hermes will use the metadata.hermes.category = "research")
-hermes skills install https://raw.githubusercontent.com/wangp-gh/renesas-search/main/SKILL.md --category research
+# From GitHub URL (Hermes will use the metadata.hermes.category = "hardware")
+hermes skills install https://raw.githubusercontent.com/wangp-gh/renesas-search/main/SKILL.md --category hardware
 ```
 
 The skill's frontmatter already includes Hermes fields (`version`, `author`, `license`, `platforms`, `metadata.hermes.{category,tags,related_skills}`). See [HERMES_INSTALL.md](./HERMES_INSTALL.md) for full details, category selection, and verification.

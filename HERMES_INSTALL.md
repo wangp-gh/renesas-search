@@ -71,14 +71,14 @@ The skill ships with `references/product_families.md` and `TEST_SCENARIOS.md`. T
 
 ```bash
 git clone https://github.com/wangp-gh/renesas-search.git /tmp/renesas-search
-mkdir -p ~/.hermes/skills/research
-cp -r /tmp/renesas-search ~/.hermes/skills/research/renesas-search
+mkdir -p ~/.hermes/skills/hardware
+cp -r /tmp/renesas-search ~/.hermes/skills/hardware/renesas-search
 # Copy only the skill files you want:
-cp ~/.hermes/skills/research/renesas-search/SKILL.md ~/.hermes/skills/research/renesas-search/SKILL.md
-cp -r ~/.hermes/skills/research/renesas-search/references ~/.hermes/skills/research/renesas-search/
+cp ~/.hermes/skills/hardware/renesas-search/SKILL.md ~/.hermes/skills/hardware/renesas-search/SKILL.md
+cp -r ~/.hermes/skills/hardware/renesas-search/references ~/.hermes/skills/hardware/renesas-search/
 
 # Optional: include test scenarios for verification
-cp ~/.hermes/skills/research/renesas-search/TEST_SCENARIOS.md ~/.hermes/skills/research/renesas-search/
+cp ~/.hermes/skills/hardware/renesas-search/TEST_SCENARIOS.md ~/.hermes/skills/hardware/renesas-search/
 ```
 
 Then start a new Hermes session; the skill should appear in `/skills list` under the **research** category.
@@ -88,7 +88,7 @@ Then start a new Hermes session; the skill should appear in `/skills list` under
 Once the skill is published on agentskills.io, install with:
 
 ```bash
-hermes skills install official/research/renesas-search
+hermes skills install official/hardware/renesas-search
 ```
 
 (Path C requires a separate submission to the agentskills.io directory; not yet done as of v3.0.4.)
@@ -122,7 +122,7 @@ Hermes uses `metadata.hermes.category` (or the path under `skills/<category>/`) 
 
 Valid categories observed in the Hermes bundled catalog: `apple`, `autonomous-ai-agents`, `creative`, `devops`, `media`, `mlops`, `productivity`, `research`, `software-development`. If your skill does not fit any, leave it unset and Hermes will install it as a top-level skill without a category.
 
-For renesas-search, **research** is the closest fit (it is a lookup / datasheet-driven research skill, not a content-creation or DevOps tool).
+For renesas-search, **hardware** is the closest fit — it is a hardware selection / datasheet-driven engineering skill, not a content-creation or DevOps tool. If your local Hermes catalog does not yet list `hardware` as a valid category, the installer will fall back to a top-level install (the skill still works, it just won't appear under a category bucket).
 
 ## Notes on the Hermes Security Scan
 
